@@ -1,7 +1,21 @@
 <div class="footer">
   <div class="row">
-    <div id="footer-info" class="inner">
+    <div class="col-xs-8">
+
+      <ul class="list-inline">
+        {{ range .Site.Params.footer.links }}
+        <li class=""><a href="{{ .link | absURL }}">{{ .label }}</a></li>
+        {{ end }}
+      </ul>
+
+    </div>
+    <div class="col-xs-4">
       {{ partial "social" . }}
+    </div>
+    <div class="col-xs-2">
+      search
+    </div>
+    <div class="col-xs-12">
 
       &copy; {{.Now.Format "2006"}}
       {{ with .Site.Params.copyright }}{{ . | markdownify}}{{ end }}
