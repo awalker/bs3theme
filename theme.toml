@@ -6,10 +6,10 @@ license = "MIT"
 licenselink = "https://github.com/virtmindset/hhtheme/blob/master/LICENSE.md"
 description = ""
 homepage = "http://huddlehouse.com/"
-tags = ["", ""]
-features = ["", ""]
+tags = ["responsive", ""]
+features = ["responsive", ""]
 min_version = 0.18
 
 [author]
   name = "Adam Walker"
-  homepage = ""
+  homepage = "//github.com/virtualmindset"

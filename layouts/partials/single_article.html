@@ -1,0 +1,21 @@
+{{ if .Params.disable_profile | and .Params.disable_widgets }}
+<div id="main" class="col-xs-12">
+{{ else }}
+<div id="main" class="col-xs-10">
+{{ end }}
+    <div class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+                <img src="{{ .Params.banner | absURL }}" class="article-banner">
+            {{ end }}
+
+            {{ partial "article_header" . }}
+            <div class="article-entry" itemprop="articleBody">
+                {{ .Content }}
+            </div>
+            {{ partial "article_footer" . }}
+        </div>
+
+    </div>
+
+</div>

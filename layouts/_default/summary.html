@@ -1,0 +1,19 @@
+<div class="media" data-media-url="{{ .Permalink }}">
+  <div class="media-left">
+    <a href="{{ .Permalink }}">
+      {{ if isset .Params "banner" }}
+      <img class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=bnr&w=100&h=100" alt="Image">
+      {{ else }}
+      <img class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=img&w=100&h=100" alt="Image">
+      {{ end }}
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+    <div class="archive-article-date">
+      <i class="fa fa-calendar"></i>
+      <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+    <p>{{ .Summary }}</p>
+</div>
+  </div>
+</div>

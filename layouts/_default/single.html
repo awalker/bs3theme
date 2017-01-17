@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+{{ partial "head" . }}
+
+<body>
+  {{ partial "header" . }}
+<div class="container-fluid">
+
+    <div class="row">
+    {{ partial "sidebar" . }}
+    {{ partial "single_article" . }}
+    </div>
+
+</div>
+<div class="container-fluid">
+{{ partial "footer" . }}
+</div>
+
+</body>
+</html>

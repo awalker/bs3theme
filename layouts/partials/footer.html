@@ -1,0 +1,13 @@
+<div class="footer">
+  <div class="row">
+    <div id="footer-info" class="inner">
+      {{ partial "social" . }}
+
+      &copy; {{.Now.Format "2006"}}
+      {{ with .Site.Params.copyright }}{{ . | markdownify}}{{ end }}
+    </div>
+  </div>
+</div>
+
+{{ partial "footer_js" . }}
+{{ partial "footer_custom_js" . }}

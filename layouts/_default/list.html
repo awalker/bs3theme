@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+{{ partial "head" . }}
+
+<body>
+  {{ partial "header" . }}
+<div class="container-fluid">
+
+    <div class="row">
+    {{ partial "sidebar" . }}
+    <div class="col-xs-10">
+      <h1>{{ .Title }}</h1>
+
+      <div class="media-list">
+      {{ $paginator := .Paginate .Data.Pages }}
+      {{ range $paginator.Pages }}
+          {{ .Render "summary" }}
+      {{ end }}
+      </div>
+
+      {{ partial "pagination" . }}
+    </div>
+    </div>
+
+</div>
+<div class="container-fluid">
+{{ partial "footer" . }}
+</div>
+
+</body>
+</html>
