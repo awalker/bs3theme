@@ -13,8 +13,8 @@
       <h1>{{ .Title }}</h1>
 
       <div class="media-list">
-      {{ $paginator := .Paginate .Data.Pages }}
-      {{ range $paginator.Pages }}
+      {{ $paginator := .Paginate .Data.Pages.ByWeight }}
+      {{ range $paginator.Pages.ByWeight }}
           {{ .Render "summary" }}
       {{ end }}
       </div>
