@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+{{ partial "head" . }}
+
+<body>
+  {{ partial "header" . }}
+<div class="container-fluid">
+  <div class="row">
+  {{ partial "sidebar" . }}
+  <div class="col-xs-10">
+    {{ partial "title" .Title }}
+
+    <ul class="list-group">
+      {{ $data := .Data }} {{ range $key, $value := .Data.Terms.ByCount }}
+      <li class="list-group-item" data-rowclick="{{ $value.Name | urlize }}">
+        <span class="badge">{{ $value.Count }}</span>
+        <a href="{{ $value.Name | urlize }}">
+        {{ $value.Name }}
+      </a>
+      </li>
+      {{ end }}
+    </ul>
+
+  </div>
+  </div>
+
+</div>
+<div class="container-fluid">
+{{ partial "footer" . }}
+</div>
+
+</body>
+</html>
