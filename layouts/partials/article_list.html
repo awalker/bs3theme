@@ -1,0 +1,7 @@
+
+  <div class="media-list">
+  {{ $paginator := .Paginate .Data.Pages.ByWeight }}
+  {{ range $paginator.Pages.ByWeight }}
+      {{ .Render "summary" }}
+  {{ end }}
+  </div>
