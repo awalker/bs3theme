@@ -3,8 +3,8 @@
     <div class="col-xs-8">
 
       <ul class="list-inline">
-        {{ range .Site.Params.footer.links }}
-        <li class=""><a href="{{ .link | absURL }}">{{ .label }}</a></li>
+        {{ range .Site.Menus.footer }}
+        <li class=""><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
         {{ end }}
       </ul>
 

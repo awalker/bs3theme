@@ -11,9 +11,12 @@
   <div class="col-xs-10">
     {{ partial "title" .Title }}
 
+    {{ .Content }}
+
   {{ partial "article_list" . }}
 
     {{ partial "pagination" . }}
+
   </div>
   </div>
 
