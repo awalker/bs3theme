@@ -1,4 +1,8 @@
-<div>
-  welcome
-  slide show
+{{ if .Params.disable_profile | and .Params.disable_widgets }}
+<div id="main" class="col-xs-12">
+{{ else }}
+<div id="main" class="col-xs-10">
+{{ end }}
+  {{ partial "carousel" .}}
+  {{ .Content }}
 </div>
