@@ -1,7 +1,7 @@
 <div class="col-xs-12 col-sm-2">
 <div>Logo</div>
 
-<ul class="nav nav-pills visible-xs">
+<ul class="list-inline visible-xs">
   {{ range .Site.Menus.sidebar }}
   <li><a href="{{ .URL | absURL }}" class="">{{ .Name }}</a></li>
   {{ end }}
