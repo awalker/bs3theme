@@ -8,10 +8,12 @@
   {{ end }}
 </ul>
 
-<div class="col-sm-12 list-group hidden-xs">
+<div class="col-sm-12 hidden-xs">
+  <div class="list-group">
   {{ range .Site.Menus.sidebar }}
   <a href="{{ .URL | absURL }}" class="list-group-item">{{ .Name }}</a>
   {{ end }}
+  </div>
 </div>
 
 </div>
