@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+{{ partial "head" . }}
+
+<body>
+  {{ partial "header" . }}
+<div class="container-fluid">
+
+    <div class="row">
+    {{ partial "sidebar" . }}
+    <div id="main" class="col-xs-12 col-sm-10">
+        <div class="article article-type-page" itemscope="" itemprop="blogPost">
+            <div class="article-inner">
+              <h2>Search Results</h2>
+              <script>
+                (function() {
+                  var cx = '005644248322361196293:bc3tiklccuo';
+                  var gcse = document.createElement('script');
+                  gcse.type = 'text/javascript';
+                  gcse.async = true;
+                  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(gcse, s);
+                })();
+              </script>
+              <gcse:searchresults-only></gcse:searchresults-only>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+</div>
+<div class="container-fluid">
+{{ partial "footer" . }}
+</div>
+
+</body>
+</html>
