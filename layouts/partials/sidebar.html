@@ -2,16 +2,16 @@
   <div class="row">
 <div class="col-xs-4 col-sm-12"><img class="img-responsive" src="/images/hh_logo.png" alt="Logo"></div>
 
-<ul class="col-xs-8 list-inline visible-xs">
+<ul class="col-xs-8 visible-xs">
   {{ range .Site.Menus.sidebar }}
-  <li><a href="{{ .URL | absURL }}" class="">{{ .Name }}</a></li>
+  <span><a href="{{ .URL | absURL }}" class="btn btn-default btn-xs btn-sidebar-xs">{{ .Name }}</a></span>
   {{ end }}
 </ul>
 
 <div class="col-sm-12 hidden-xs">
-  <div class="list-group">
+  <div class="-list-group-">
   {{ range .Site.Menus.sidebar }}
-  <a href="{{ .URL | absURL }}" class="list-group-item">{{ .Name }}</a>
+  <a href="{{ .URL | absURL }}" class="btn btn-default btn-sidebar">{{ .Name }}</a>
   {{ end }}
   </div>
 </div>
