@@ -37,7 +37,7 @@
       <ul class="nav navbar-nav navbar-right">
         {{ range .Site.Menus.main }}
         {{ if gt .Weight 80 }}
-        <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+        <li><a href="{{ .URL | absURL }}" id="loc-go"><span class="sr-only">{{ .Name }}</span></a></li>
         {{ end }}
         {{ end }}
       </ul>
