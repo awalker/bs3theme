@@ -11,7 +11,11 @@
 <div class="col-sm-12 hidden-xs">
   <div class="-list-group-">
   {{ range .Site.Menus.sidebar }}
-  <a href="{{ .URL | absURL }}" class="btn btn-default btn-sidebar">{{ .Name }}</a><br>
+    {{ if eq .Name "Feedback" }}
+      <a href="{{ .URL | absURL }}" class="btn btn-default btn-sidebar btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ .Name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><br>
+    {{ else }}
+      <a href="{{ .URL | absURL }}" class="btn btn-default btn-sidebar">{{ .Name }}</a><br>
+    {{ end }}
   {{ end }}
   </div>
 </div>
