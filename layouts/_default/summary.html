@@ -1,6 +1,7 @@
 <div class="media" data-media-url="{{ .Permalink }}">
   <div class="media-left">
     <a href="{{ .Permalink }}">
+      <!--
       {{ if isset .Params "banner" }}
       <img class="media-object" src="{{ .Params.banner | absURL}}" width="100" alt="Image">
       {{ else }}
@@ -16,6 +17,7 @@
       <img class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=img&w=100&h=100"  width="100" alt="Image">
       {{ end }}
       {{ end }}
+    -->
     </a>
   </div>
   <div class="media-body">
@@ -23,7 +25,8 @@
     <div class="archive-article-date">
       <i class="fa fa-calendar"></i>
       <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
-    <p>{{ .Summary }}</p>
+    <!-- <p>{{ .Summary }}</p> -->
+    <hr>
 </div>
   </div>
 </div>
