@@ -4,10 +4,10 @@
 <div class="col-xs-12 col-sm-8 col-lg-9">
 {{ end }}
 <div id="main" >
-    <div class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div about="{{ .Permalink }}" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             {{ partial "article_header" . }}
-            <div class="article-entry" itemprop="articleBody">
+            <div class="article-entry editable" itemprop="articleBody" property="articleBody">
                 {{ .Content }}
                 <div class="clear-fix">&nbsp;</div>
             </div>
