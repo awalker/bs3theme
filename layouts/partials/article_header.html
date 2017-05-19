@@ -1,15 +1,13 @@
+<header class="article-header article-banner editable">
 {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-  <header class="article-header article-banner">
     <img src="{{ .Params.banner | absURL }}" class="img-responsive" style="width: 100%;">
     {{ else }}
-    <header class="article-header">
+    <img src="/images/press-releases-header-h1.png" class="img-responsive" style="width: 100%;">
 {{ end }}
 
-    <a href="{{ .Permalink }}">
-    <h1 class="article-title editable" itemprop="name" property="name">
-        {{ .Title }}
-    </h1>
-    </a>
+    <!-- <a href="{{ .Permalink }}"> -->
+    <h1 class="article-title" itemprop="name" property="name">{{ .Title }}</h1>
+    <!-- </a> -->
     <!--div class="article-meta">
         <div class="article-date">
             <i class="fa fa-calendar"></i>
