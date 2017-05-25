@@ -1,16 +1,13 @@
 <header class="article-header article-banner editable">
-{{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-    <img src="{{ .Params.banner | absURL }}" class="img-responsive" style="width: 100%;">
+    {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+    <img src="{{ .Params.banner | absURL }}" class="img-responsive" style="width: 100%;"> {{ else }}
+    <img src="/images/press-releases-header-h1.png" class="img-responsive" style="width: 100%;"> {{ end }} {{ if eq (index .Params.categories 0) "press" }}
+    <h1 class="article-title">Press Release</h1>
+    <!--<h2 class="article-title" itemprop="name" property="name">{{ .Title }}</h2>-->
+    {{ else }} {{ if lt (len .Title) 15 }}
+    <h1 class="article-title" itemprop="name" property="name">{{ .Title }}</h1>
     {{ else }}
-    <img src="/images/press-releases-header-h1.png" class="img-responsive" style="width: 100%;">
-{{ end }}
-
-    <code>{{ if eq (index .Params.categories 0)  "press" }}
-        <h1 class="article-title">Press Release</h1>
-        <!--<h2 class="article-title" itemprop="name" property="name">{{ .Title }}</h2>-->
-      {{ else }}
-        <h1 class="article-title" itemprop="name" property="name">{{ .Title }}</h1>
-      {{ end }}
-    </code>
+    <h1 class="article-title-long" itemprop="name" property="name">{{ .Title }}</h1>
+    {{ end }} {{ end }}
 
 </header>
