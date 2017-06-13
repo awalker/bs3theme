@@ -1,20 +1,20 @@
 {{ if .Params.disable_profile | and .Params.disable_widgets }}
 <div class="col-xs-12">
-{{ else }}
-<div class="col-xs-12 col-sm-8 col-lg-9">
-{{ end }}
-<div id="main" >
-    <div about="{{ .Permalink }}" class="article article-type-page" itemscope="" itemprop="blogPost">
+  {{ else }}
+  <div class="col-xs-12 col-sm-8 col-lg-9">
+    {{ end }}
+    <div id="main">
+      <div about="{{ .Permalink }}" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
-            {{ partial "article_header" . }}
-            <div class="article-entry editable" itemprop="articleBody" property="articleBody">
-                {{ .Content }}
-            </div>
-            <div class="clear-fix">&nbsp;</div>
-            {{ partial "article_footer" . }}
+          {{ partial "article_header" . }}
+          <div class="article-entry" itemprop="articleBody" property="articleBody">
+            {{ .Content }}
+          </div>
+          <div class="clear-fix">&nbsp;</div>
+          {{ partial "article_footer" . }}
         </div>
 
-    </div>
+      </div>
 
-</div>
-</div>
+    </div>
+  </div>
